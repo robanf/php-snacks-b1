@@ -1,5 +1,8 @@
 <?php
-
+    
+    $nome= $_GET['nome'];
+    $email= $_GET['email'];
+    $eta= $_GET['eta'];
 
 
 ?>
@@ -17,5 +20,17 @@
 </head>
 <body>
     
+
+    <p>
+        <?php
+
+            if(strlen($nome)>3 && strpos($email,'@')==true && strpos($email,'.')==true && is_numeric($eta)==true){
+                echo 'Accesso Riuscito';
+            }
+            else{
+                echo 'Accesso Negato';
+            };
+        ?>
+    </p>
 </body>
 </html>
